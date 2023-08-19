@@ -68,4 +68,18 @@ a *pointer* is another location reference in the memory.
 A *doubly linked list* can be thought of as a bidirectional singly list. Each node in the doubly linked list has both a next pointer and prev pointer.
 
 ### Stack and Queues
+1. STACK
+A *stack* is a data structure in which only the last inserted element can be removed and accessed. Think about plates on a table. This is a principles known as last in, first out (LIFO)
+
+**-Peek** O(1): means returning the last-added element without removing it from the data structure.
+
+**-Insert** O(1): adding something to the end, it can be done with Linked list and array method push()
+
+**-Deletion** O(1): or pop delete something to the begining of the data structure, and can also be done using linked list.
+
+**Access** O(n): accessing elements in the data structure at *nth* node from the top.
+
+2. QUEUE 
+
+A *queue* is also a data structure, but you can remove only the first added element. This is a principle known as *first in, first out* (FIFO).
 
