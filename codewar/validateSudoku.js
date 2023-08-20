@@ -96,12 +96,10 @@ function validateSudoku(grid) {
                 return false
             }
             rows.add(grid[i][j])
-            console.log(rows)
             if (grid[j][i] < 1 || grid[j][i] > N || cols.has(grid[j][i])) {
                 return false
             }
             cols.add(grid[j][i])
-            console.log(cols)
         }
     }
     return true

@@ -83,3 +83,18 @@ A *stack* is a data structure in which only the last inserted element can be rem
 
 A *queue* is also a data structure, but you can remove only the first added element. This is a principle known as *first in, first out* (FIFO).
 
+
+### Tree
+A general *tree* data structure is composed of nodes with children nodes. the first/top node is called the *root node*.
+
+1. **Binary Trees**
+
+A *binary tree* is a type of tree that has only two children nodes: left and right. 
+
+**Tree traversal**
+
+There are various traversal techniques, and the most popular one are: *pre-order* traversal, *post-order*, *in-order*, and *level-order* traversal.
+
+* Pre-order Traversal
+
+Pre-order traversal visits nodes in the following order: root(the current node), left, right.
