@@ -97,4 +97,16 @@ There are various traversal techniques, and the most popular one are: *pre-order
 
 * Pre-order Traversal
 
-Pre-order traversal visits nodes in the following order: root(the current node), left, right.
+*Pre-order* traversal visits nodes in the following order: root(the current node), left, right.
+
+* In-order Traversal 
+
+*In-order* traversal visits nodes in the following order : left, root(current nodes), right.
+
+* Post-order Traversal
+
+*Post-order* traversal visits nodes in the following order: left, right, root (current node).
+
+* Level-order Traversal
+
+*Level-order traversal* is also known as *breadth first search*(BFS)
