@@ -55,7 +55,7 @@ class BinaryTree {
         return false
      }
 
-    traverselPreOrder() {
+    traversalPreOrder() {
         traverselPreOrderHelper(this.root)
         function traverselPreOrderHelper(node) {
             if (!node) {
@@ -64,6 +64,81 @@ class BinaryTree {
             console.log(node.value)
             traverselPreOrderHelper(node.left)
             traverselPreOrderHelper(node.right)
+        }
+    }
+
+    traversalInOrder(){
+        traversalInOrderHelper(this.root)
+        function traversalInOrderHelper(node){
+            if(!node){
+                return;
+            } else {
+                traversalInOrderHelper(node.left)
+                console.log(node.value)
+                traversalInOrderHelper(node.right)
+            }
+        }
+    }
+
+    traversalPostOrder(){
+        traversalPostOrderHelper(this.root)
+        function traversalPostOrderHelper(node){
+            if(node.left) traversalPostOrderHelper(node.left)
+            if(node.right) traversalPostOrderHelper(node.right)
+            console.log(node.value)
+        }
+    }
+
+    traversalLevelOrder(){
+        // breadth first search
+        let root = this.root
+        let queue = []
+        if(!root){
+            return;
+        }
+        queue.push(root)
+        while(queue.length){
+            let temp = queue.shift()
+            console.log(temp.value)
+            if(temp.left) queue.push(temp.left)
+            if(temp.right) queue.push(temp.right)
+        }
+    }
+
+
+    delete(value){
+        return deleteRecursily(this.root, value)
+
+        function deleteRecursily(root, value){
+            if(!root){
+                return null
+            } else if(value < root.value){
+                root.left = deleteRecursily(root.left, value)
+            } else if(value > root.value){
+                root.right = deleteRecursily(root.right, value)
+            } else {
+                // no child
+                if(!root.left && !root.right){
+                    return null
+                } else if(!root.right){
+                    root = root.right
+                    return root
+                } else if(!root.left){
+                    root = root.left
+                    return root
+                } else {
+                    let temp = findMin(root.right)
+                    root.value = temp.value
+                    root.right = deleteRecursily(root.right, temp.value)
+                }
+            }
+        }
+
+        function findMin(root){
+            while(root.left){
+                root = root.left
+            }
+            return root
         }
     }
 
@@ -139,13 +214,4 @@ binaryTree.insert(45)
 binaryTree.insert(10)
 binaryTree.insert(75)
 
-console.log(binaryTree.lookup(20))
-
-// binaryTree.traverselPreOrder()
-
-// function traverse(root){
-//     const tree = { value: root.value};
-//     tree.left = root.left === null ? null : traverse(root.left)
-//     tree.right = root.right = null ? null : traverse(root.right)
-//     return tree
-// }
+binaryTree.traversalLevelOrder()
