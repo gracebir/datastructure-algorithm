@@ -110,3 +110,83 @@ There are various traversal techniques, and the most popular one are: *pre-order
 * Level-order Traversal
 
 *Level-order traversal* is also known as *breadth first search*(BFS)
+
+
+### Graphs
+
+*Graphs* are are visual representation of the connections between objects.
+
+Some basic terminology and concepts about graphs:
+
+- *Vertex*: is node from which graphs are formed. A node will be noted as V
+- *Edge*: is the connection between nodes in a graph. Graphically, 
+it is the line between the vertices.
+- *Degree of vertex*: the degree if a vertex refers to the number if edges an the that vertex.
+- *Sparse graph*: A graph is considered sparse when only a small fraction of possible connection exist between vertices.
+- *Dense graph*: A graph is considered dense wheb there are lot of connections between different vertices
+- *Cyclical graph*: A A directed graph is considered cyclical if there is a path that traverls from a vertex and back to itself.
+- *Weights*: weights are values on the edges. Weights can signify various things depending on the context.
+
+**Undirected Graphs**
+
+*Undirected graphs* are graphs that do not have a direction between edges. The edge implies a mutual connection between the two nodes without a direction.
+
+
+## Algorithm
+
+*Algorithm* is is a procedure used for solving a problem or performing a computation. Algorithms act as an exact list of instructions that conduct specified actions step by step in either hardware- or software-based.
+
+Algorithm allows us to use data structure to perform actions on data.
+
+1. ### Recursion
+
+*Recursion* is not technically said a algorithm, it is just a concept that will help throught this process to write some interesting algorithms.
+
+what is recursion?
+
+In math, linguistic, and art, recursion refers to the occurrence of a thing defined in terms if itself. In computer science, a *recursive function* is a function thta calls itself.
+
+2. ### Sorting
+
+It is faster and easier to locate items in a sorted array than in an unsorted sorted array.
+
+### Bubble sort
+
+*Bubble sort* is simply iterates over the entire array and swaps elements if one is bigger than the other.
+
+### Selection sort
+
+*Selection sorting* works by scanning the elements for the smallest element and inserting it into the current position of the array. it is better that bubble sort.
+
+### Insertion Sort
+
+*Insertion sort* works similarly to selecion sort by searching the array sequentially and moving the unsorted items into a sorted sublist on the left side of array.
+
+### Quicksort
+
+*Quicksort* works by obtaining a pivot and partitioning the array around it (bigger element on one side and smaller elements on the other side) until everything is sorted.
+
+### Quickselect
+
+*Quickselect* is a selection algorithm to find the *kth* smallest element in unordered list. Quickselect uses the same approach as a quicksort algorithm. A pivot is chosen, and the array is partitioned.
+
+
+### Mergesort
+
+Mergesort works by dividing the array into subarrays until each array has one element. Then, each subarray is concatenated(merged) in s sorted order.
+
+## Searching 
+
+As mentioned, searchng is the task of looking for a specific inside a data structure. Linear searches are especially flexible because they can be used with both sorted and unsorted data. Binary searches are specifically used with sorted data.
+
+1. Linear Search 
+
+A linear search works by going through each element of the array one index after another sequentially.
+
+2. Binary Search 
+
+Binary search is a searching algorithm, in which every element of the array is checked, binary searches can check the middle value to see whether the desired value is greater or smaller than it.
+
+3. Breadth Search First
+
+4. Depth Search First
